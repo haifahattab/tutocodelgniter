@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'framework/codeigniter-3.1.11';
+	$system_path = 'system';
 
 /*
  *---------------------------------------------------------------

@@ -28,7 +28,7 @@
         <div class="navbar-header row">
           <a class="navbar-brand" href="/index.html">EL ABED Haifa</a>
           <ul class="nav navbar">
-            <li class="mr-4"><?= anchor('index', "Accueil"); ?></li>
+            <li class="mr-4"><?= anchor('index',"Accueil"); ?></li>
             <li><?= anchor('contact', "Contact"); ?></li>
 
           </ul>
