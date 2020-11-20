@@ -13,6 +13,7 @@ $config = array(
             'label' => 'E-mail',
             'rules' => array('valid_email', 'required')
         ), 
+    
         array(
             'field' => 'title',
             'label' => 'Titre',
