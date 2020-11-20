@@ -7,6 +7,7 @@
     <title><?= $title ?></title>    
     <link rel="stylesheet" href="<?= base_url()."assets/css/bootstrap.min.css";?>">
     <link rel="stylesheet" href="<?= base_url()."assets/css/theme.css";?>">
+    <link rel="stylesheet" href="<?= base_url()."assets/style.css";?>">
     <script src="jquery-2.1.1.min.js"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
     <style>
