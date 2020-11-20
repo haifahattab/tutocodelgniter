@@ -9,4 +9,12 @@ class Site extends CI_Controller {
         $this->load->view('site/index', $data);
         $this->load->view('common/footer', $data);
     }
+    public function contact () {
+        $data["title"] = "contact";
+
+        $this->load->view('common/header', $data);
+        $this->load->view('site/contact', $data);
+        $this->load->view('common/footer', $data);
+
+    }
 }

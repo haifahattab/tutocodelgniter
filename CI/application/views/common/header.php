@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="<?= base_url()."assets/css/theme.css";?>">
     <script src="jquery-2.1.1.min.js"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <style>
+      a{
+        color: grey;
+      }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,8 +27,10 @@
       <div class="container-fluid">
         <div class="navbar-header row">
           <a class="navbar-brand" href="/index.html">EL ABED Haifa</a>
-          <ul class="nav navbar-brand">
-            <li><a href="<?= site_url('index'); ?>">Accueil</a></li>
+          <ul class="nav navbar">
+            <li class="mr-4"><?= anchor('index', "Accueil"); ?></li>
+            <li><?= anchor('contact', "Contact"); ?></li>
+
           </ul>
         </div>
       </div>
