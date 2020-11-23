@@ -46,6 +46,7 @@
     <?php endif; ?>
             <li><?= anchor('contact', "Contact"); ?></li>
             <li><?= anchor('apropos', "A Propos"); ?></li>
+            <li><?= anchor('blog/index','Blog'); ?></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <?php if($this->auth_user->is_connected) : ?>
