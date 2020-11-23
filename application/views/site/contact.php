@@ -3,10 +3,10 @@
 use function PHPSTORM_META\type;
 ?>
 <div class="container">
-    <div class="offset-lg-3 col-5">
+    <div class="offset-lg-3 col-3">
       <?= heading( $title); ?>
     </div>
-    <div class="offset-lg-3 col-5">
+    <div class="offset-lg-3 col-3">
       <?= form_open('contact', ['class' => 'form-horizontal']); ?>
       <div class="form-group">
       <?= form_label("Votre nom&nbsp;:", "name", ['class' => "col-md-4 control-label "]); ?>
