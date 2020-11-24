@@ -37,22 +37,19 @@
             </div>
         </div>
         <div class="col-md-2">
-            <ul class="nav nav-pills nav-stacked">
-                <li>
-                    <?= anchor('blog/index', "Liste articles") ?>
-                </li>
-                <?php if ($this->auth_user->is_connected) : ?>
-                    <li>
-                        <?= anchor(['blog', 'edition', $this->article->id], "Modifier article") ?>
-                    </li>
-                    <li>
-                        <?= anchor(['blog', 'suppression', $this->article->id], "Supprimer", ['id' => 'menu_delete_article']) ?>
-                    </li>
-                    <li>
-                        <?= anchor('blog/edition', "Nouvel article") ?>
-                    </li>
+        <ul class="nav nav-pills nav-stacked">
+            <li><?= anchor('blog/index', "Liste articles") ?></li>
+            <?php if ($this->auth_user->is_connected) : ?>
+                <li><?= anchor(['blog', 'edition', $this->article->id], "Modifier") ?></li>
+                <?php if ($this->article->status !== 'P'): ?>
+                <li><?= anchor(['blog', 'publication', $this->article->id], "Publier") ?></li>
                 <?php endif; ?>
-            </ul>
+                <?php if ($this->article->status !== 'D'): ?>
+                <li><?= anchor(['blog', 'suppression', $this->article->id], "Supprimer", ['id' => 'menu_delete_article']) ?></li>
+                <?php endif; ?>
+                <li><?= anchor('blog/edition', "Nouvel article") ?></li>
+            <?php endif; ?>
+        </ul>
         </div>
     </div>
 </div>
