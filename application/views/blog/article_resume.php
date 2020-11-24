@@ -8,7 +8,7 @@ $article_url = 'blog/' . $alias . '_' . $id;
     <small>
       <?= nice_date($date, 'd/m/Y'); ?>
       -
-      <?= $author ?>
+      <?= $author_id ?>
       <?php if ($this->auth_user->is_connected) : ?>
         -
         <?= $this->article_status->label[$status]; ?>

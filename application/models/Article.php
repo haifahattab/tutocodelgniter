@@ -86,7 +86,7 @@ class Article extends CI_Model {
     public function load($id, $show_hidden = FALSE) {
         $this->clear_data();
         $this->db
-             ->from('article_username')
+             ->from('article')
              ->where('id', $id);
         if (!$show_hidden) {
             $this->db->where('status', 'P');
@@ -96,7 +96,6 @@ class Article extends CI_Model {
                      ->first_row();
         if ($data !== NULL) {
             $this->_alias = $data->alias;
-            $this->_author = $data->author;
             $this->_author_id = $data->author_id;
             $this->_content = $data->content;
             $this->_date = $data->date;
@@ -141,5 +140,12 @@ class Article extends CI_Model {
         $alias = url_title($title, 'underscore', TRUE);
         $this->_title = $title;
         $this->_alias = $alias;
+    }
+
+    public function delete() {
+        if ($this->is_found) {
+            $this->_status = 'D';
+            $this->save();
+        }
     }
 }
